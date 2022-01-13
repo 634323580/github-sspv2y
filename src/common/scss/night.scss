@@ -1,0 +1,192 @@
+
+// 晚上
+$nightBg:#111214;
+$nightTheme:#17181a;
+$night-color:#adaeb3;
+$night-border: #18191a;
+$night151618: #151618;
+$night3e3f43: #3e3f43;
+$night75777e: #75777e;
+%bg{
+    background-color:$nightTheme;
+}
+%color1{
+  color:#535458;
+}
+%color2{
+  color:$night-color;
+}
+.night{
+    background-color:$nightBg;
+    color:$night-color;
+    .artils-content,.title-nav{
+        background-color:$nightBg !important;
+    }
+    .avatarDetail p{
+        color: $night-color !important;
+    }
+    .header{
+        @extend %bg;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+        .header-nav{
+            .list{
+                 @extend %color1;
+                &.on{
+                    @extend %color2;
+                }
+            }
+        }
+    }
+    .usersuv{
+        .usersuv-list{
+            color:#707178;
+            .iconfont{
+                color:#5d5d63;
+            }
+            .content{
+                &:after{
+                    border-color:#1c1d1f;
+                }
+                .number{
+                    color:#888787;
+                }
+            }
+        }
+    }
+    .sheet-item{
+        .sheet-title{
+            background-color:$night151618;
+        }
+    }
+    .play-controller{
+        background: $nightTheme;
+        .song_text{
+            .song-title{
+                color:$night-color
+            }
+            .singer-name{
+                color: #525252;
+            }
+        }
+        .pie{
+           border-color: $night-color;
+           .circle-1 {
+                stroke: $night-color;
+            }
+            .circle-2{
+            stroke: #ce3d3e;
+            }
+            &.play{
+                .circle-1{
+                    stroke: #525252;
+                }
+            }
+        }
+        .play-btn{
+            .playIcon{
+                color:$night-color;
+            }
+        }
+    }
+    .search-wrapper{
+        background: $nightTheme;
+    }
+    .lately-wrapper{
+        background: $nightBg;
+    }
+    .search-head{
+        @extend %bg;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+        .prev-btn i{
+            color: $night-color;
+        }
+        .search-input{
+            border-color: $night-color;
+            input{
+                color: $night-color;
+                &::-webkit-input-placeholder{
+                    color: $night75777e;
+                }
+            }
+        }
+        .text{
+            color: $night-color;
+        }
+    }
+    .search-content .search-list{
+        border-color: #101618;
+        .songname{
+            color: $night-color;
+        }
+        .album{
+            color:$night75777e
+        }
+    }
+.song-list{
+    .item-text.item-text{
+        .item-title{
+            color: $night75777e;
+        }
+        p{
+            color: $night3e3f43;
+        }
+        &:after{
+            border-color: $night-border;
+        }
+    }
+}
+.play-list{
+    background: $nightBg;
+    .list{
+        color:$night-color;
+        &:after{
+            border-color:$night-border;
+        }
+    }
+}
+.playList-header{
+        background: $nightBg;
+        color:$night-color;
+        &:after{
+            border-color:$night-border;
+        }
+    }
+.prev-head{
+        @extend %bg;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 1);
+        .prev-btn i{
+            color: $night-color;
+        }
+        .search-input{
+            border-color: $night-color;
+            input{
+                color: $night-color;
+                &::-webkit-input-placeholder{
+                    color: $night75777e;
+                }
+            }
+        }
+        .text{
+            color: $night-color;
+        }
+    }
+    .ranking-wraper{
+        background: $nightBg;
+    }
+    .toplist{
+        .item{
+            background: $nightTheme;
+            color:$night75777e;
+        }
+    }
+    .toplist-page{
+      background: $nightBg;
+      .rank{
+          color: #ffcd32;
+      }
+      .name{
+          color: #f0f0f0;
+      }
+    }
+}
+

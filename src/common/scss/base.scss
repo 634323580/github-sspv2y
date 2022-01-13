@@ -1,0 +1,126 @@
+@import '../../../node_modules/normalize.css/normalize';
+@import './var.scss';
+body {
+    font: 14px/1.4286 "PingFang SC", "STHeitiSC-Light", "Helvetice-Light", arial, sans-serif;
+}
+input,select,button{
+    font: inherit;
+}
+.clearfix:after{
+    content:'';
+    display: table;
+    clear: both;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+h1,h2,h3,h4,p{
+    margin:0;
+}
+em{
+    font-style: normal;
+}
+body{
+    background-color:$dayBg;
+    color:$day-color;
+}
+//移动端1像素 
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-devicp-pixel-ratio: 1.5) {
+    .border-1px{
+        &:after{
+            -webkit-transform: scaleY(0.7);
+            transform: scaleY(0.7)
+        }
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-devicp-pixel-ratio: 2) {
+    .border-1px{
+        &:after{
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5)
+        }
+    }
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 243760 */
+    src: url('http://at.alicdn.com/t/font_243760_55nnb69sm1tnjyvi.eot');
+    src: url('http://at.alicdn.com/t/font_243760_55nnb69sm1tnjyvi.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_243760_55nnb69sm1tnjyvi.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_243760_55nnb69sm1tnjyvi.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_243760_55nnb69sm1tnjyvi.svg#iconfont') format('svg');
+  }
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.rotatePlay {
+    -webkit-animation: rotate 20s infinite linear;
+    animation: rotate 20s infinite linear;
+}
+.rotatePaused{
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(0 deg);
+        transform: rotate(0 deg);
+    }
+    to {
+        transform: rotate(1turn);
+        transform: rotate(1turn);
+    } 
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0 deg);
+        transform: rotate(0 deg);
+    }
+    to {
+        transform: rotate(1turn);
+        transform: rotate(1turn);
+    } 
+}
+
+.week-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(75, 75, 75, 0.85);
+    color: #fff;
+    padding: 9px 20px;
+    font-size: 15px;
+    z-index: 999;
+    &.alert-show {
+        animation: show 2s;
+    }
+    @keyframes show {
+        0% {
+            transform: translateY(-100%);
+        }
+        20% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(0);
+        }
+        80% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+}
